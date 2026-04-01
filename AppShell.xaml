@@ -1,14 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="AppReciclique.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AppReciclique"
-    Title="AppReciclique">
+    xmlns:local="clr-namespace:AppReciclique">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+
+        <ShellContent
+            Title="Home"
+            Icon="home.png"
+            ContentTemplate="{DataTemplate local:MainPage}" />
+
+        <ShellContent
+            Title="Mapa"
+            Icon="map.png"
+            ContentTemplate="{DataTemplate local:MapaPage}" />
+
+        <ShellContent
+            Title="Avisos"
+            Icon="bell.png"
+            ContentTemplate="{DataTemplate local:NotificacoesPage}" />
+
+        <ShellContent
+            Title="Conta"
+            Icon="user.png"
+            ContentTemplate="{DataTemplate local:ContaUsuarioPage}" />
+
+    </TabBar>
 
 </Shell>
