@@ -1,11 +1,11 @@
 <ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.ContaUsuarioPage"
+    x:Class="AppReciclique.Pages.Educacao.Nivel2Page"
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
+  <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- 🔝 TOPO -->
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
@@ -18,7 +18,7 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="NÍVEL 6 — REUTILIZAÇÃO CRIATIVA"
+            <Label Text="NÍVEL 2 — LIXO ORGÂNICO E ALIMENTO"
            TextColor="white"
            FontSize="20"/>
         </VerticalStackLayout>
@@ -26,48 +26,35 @@
 
 
         <!-- 📚 CONTEÚDO -->
-
-
-        <VerticalStackLayout Padding="30" Spacing="15">
-
-
-            <Label Text="Nome: João da Silva"/>
-
-            <Label Text="Email: usuario@email.com"/>
-            <Label Text="Datadenascimento:17/01/1989"/>
-            <Label Text="Telefone:(14) 98841-5896"/>
-
-        </VerticalStackLayout>
-
-
+      
 
         <!-- 🏠 MENU HOME -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+    <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
-            <!-- LINHA VERDE -->
-            <BoxView HeightRequest="2"
+        <!-- LINHA VERDE -->
+        <BoxView HeightRequest="2"
              BackgroundColor="#2E7D32"
              VerticalOptions="Start"/>
 
-            <!-- BOTÃO HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
+        <!-- BOTÃO HOME -->
+        <VerticalStackLayout HorizontalOptions="Start"
                          Margin="10,10,0,0">
 
-                <VerticalStackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                </VerticalStackLayout.GestureRecognizers>
+            <VerticalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnHomeClicked"/>
+            </VerticalStackLayout.GestureRecognizers>
 
-                <Label Text="🏠"
+            <Label Text="🏠"
                FontSize="24"
                HorizontalOptions="Center"/>
 
-                <Label Text="Home"
+            <Label Text="Home"
                FontSize="10"
                HorizontalOptions="Center"/>
 
-            </VerticalStackLayout>
+        </VerticalStackLayout>
 
-        </Grid>
+    </Grid>
 
     </Grid>
 </ContentPage>

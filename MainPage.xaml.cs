@@ -118,6 +118,12 @@ public partial class MainPage : ContentPage
 
     }
 
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        lblPontos.Text = AppState.Pontos.ToString();
+    }
 }
 
 

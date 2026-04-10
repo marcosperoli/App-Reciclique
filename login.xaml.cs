@@ -12,13 +12,13 @@ public partial class LoginPage : ContentPage
         string email = txtEmail.Text;
         string senha = txtSenha.Text;
 
-        if (email == "teste" && senha == "123")
+        if (email == "usuario@email.com" && senha == "123")
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new ContaUsuarioPage());
         }
         else
         {
-            await DisplayAlert("Erro", "Login inválido", "OK");
+            await DisplayAlert("Erro", "Email ou senha inválidos", "OK");
         }
     }
 }

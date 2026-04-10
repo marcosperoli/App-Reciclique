@@ -18,7 +18,7 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="Educação Ambiental"
+            <Label Text="TRILHA VERDE"
                    TextColor="White"
                    FontSize="20"
                    HorizontalOptions="StartAndExpand"/>
@@ -32,65 +32,94 @@
                 <!-- NÍVEL 1 -->
                 <Frame CornerRadius="12" BackgroundColor="White">
                     <VerticalStackLayout>
-                        <Image Source="nivel1.jpg" HeightRequest="120"/>
+                      
                         <Label Text="NÍVEL 1 — O BÁSICO DA RECICLAGEM" FontAttributes="Bold"/>
-                        <Button Text="Acessar" Clicked="Nivel1_Clicked"/>
+                        <Button Text="Acessar" FontAttributes="Bold" Clicked="Nivel1_Clicked" BackgroundColor="#66BB6A"/>
+                        <Image Source="nivel1.jpg"
+                                HeightRequest="120"
+                                Aspect="AspectFill"
+                                Margin="0,10,0,0"/>
                     </VerticalStackLayout>
                 </Frame>
 
                 <!-- NÍVEL 2 -->
                 <Frame CornerRadius="12" BackgroundColor="White">
                     <VerticalStackLayout>
-                        <Image Source="nivel2.jpg" HeightRequest="120"/>
+                
                         <Label Text="NÍVEL 2 — LIXO ORGÂNICO E ALIMENTO" FontAttributes="Bold"/>
-                        <Button Text="Acessar" Clicked="Nivel2_Clicked"/>
+                        <Button Text="Acessar" FontAttributes="Bold" Clicked="Nivel2_Clicked" BackgroundColor="#66BB6A" />
+                        <Image Source="nivel2.png"
+                                HeightRequest="120"
+                                Aspect="AspectFill"
+                                Margin="0,10,0,0"/>
                     </VerticalStackLayout>
                 </Frame>
 
                 <!-- NÍVEL 3 -->
                 <Frame CornerRadius="12" BackgroundColor="White">
                     <VerticalStackLayout>
-                        <Image Source="nivel3.jpg" HeightRequest="120"/>
+                       
                         <Label Text="NÍVEL 3 — RESÍDUOS PERIGOSOS" FontAttributes="Bold"/>
-                        <Button Text="Acessar" Clicked="Nivel3_Clicked"/>
+                        <Button Text="Acessar" FontAttributes="Bold" Clicked="Nivel3_Clicked" BackgroundColor="#66BB6A" />
+                        <Image Source="nivel3.png"
+                                HeightRequest="120"
+                                Aspect="AspectFill"
+                                Margin="0,10,0,0"/>
                     </VerticalStackLayout>
                 </Frame>
 
                 <!-- NÍVEL 4 -->
                 <Frame CornerRadius="12" BackgroundColor="White">
                     <VerticalStackLayout>
-                        <Image Source="nivel4.jpg" HeightRequest="120"/>
+                        
                         <Label Text="NÍVEL 4 — ENTULHOS E MATERIAIS GRANDES" FontAttributes="Bold"/>
-                        <Button Text="Acessar" Clicked="Nivel4_Clicked"/>
+                        <Button Text="Acessar" FontAttributes="Bold" Clicked="Nivel4_Clicked" BackgroundColor="#66BB6A" />
+                        <Image Source="nivel4.png"
+                                HeightRequest="120"
+                                Aspect="AspectFill"
+                                Margin="0,10,0,0"/>
                     </VerticalStackLayout>
                 </Frame>
 
                 <!-- NÍVEL 5 -->
                 <Frame CornerRadius="12" BackgroundColor="White">
                     <VerticalStackLayout>
-                        <Image Source="nivel5.jpg" HeightRequest="120"/>
+                        
                         <Label Text="NÍVEL 5 — AÇÃO NA PRÁTICA (MUTIRÃO)" FontAttributes="Bold"/>
-                        <Button Text="Acessar" Clicked="Nivel5_Clicked"/>
+                        <Button Text="Acessar" FontAttributes="Bold" Clicked="Nivel5_Clicked" BackgroundColor="#66BB6A" />
+                        <Image Source="nivel5.png"
+                                HeightRequest="120"
+                                Aspect="AspectFill"
+                                Margin="0,10,0,0"/>
                     </VerticalStackLayout>
                 </Frame>
 
                 <!-- NÍVEL 6 -->
                 <Frame CornerRadius="12" BackgroundColor="White">
                     <VerticalStackLayout>
-                        <Image Source="nivel6.jpg" HeightRequest="120"/>
+                        
                         <Label Text="NÍVEL 6 — REUTILIZAÇÃO CRIATIVA" FontAttributes="Bold"/>
-                        <Button Text="Acessar" Clicked="Nivel6_Clicked"/>
+                        <Button Text="Acessar" Clicked="Nivel6_Clicked" BackgroundColor="#66BB6A"/>
+                          
+                        <Image Source="nivel6.png"
+                                HeightRequest="120"
+                                Aspect="AspectFill"
+                                    Margin="0,10,0,0"/>
                     </VerticalStackLayout>
                 </Frame>
 
                 <!-- BÔNUS -->
-                <Frame CornerRadius="12" BackgroundColor="#E8F5E9">
+                <Frame CornerRadius="12" BackgroundColor="White">
                     <VerticalStackLayout>
-                        <Image Source="bonus.jpg" HeightRequest="120"/>
-                        <Label Text="BÔNUS — CASA SUSTENTÁVEL" FontAttributes="Bold" TextColor="#1B5E20"/>
-                        <Button Text="Acessar" Clicked="Bonus_Clicked"
-                                BackgroundColor="#2E7D32"
+                       
+                        <Label Text="BÔNUS — CASA SUSTENTÁVEL" FontAttributes="Bold"/>
+                        <Button Text="Acessar" FontAttributes="Bold" Clicked="Bonus_Clicked"
+                                BackgroundColor= "#66BB6A" 
                                 TextColor="White"/>
+                            <Image Source="bonus.png"
+                                HeightRequest="120"
+                                Aspect="AspectFill"
+                                    Margin="0,10,0,0"/>
                     </VerticalStackLayout>
                 </Frame>
 

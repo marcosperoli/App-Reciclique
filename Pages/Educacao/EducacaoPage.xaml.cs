@@ -1,7 +1,6 @@
 namespace AppReciclique;
 
 using AppReciclique.Pages.Educacao;
-using AppReciclique.Pages.Educação;
 
 public partial class EducacaoPage : ContentPage
 {

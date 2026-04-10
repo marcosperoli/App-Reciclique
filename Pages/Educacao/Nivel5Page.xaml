@@ -1,7 +1,7 @@
 <ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.ContaUsuarioPage"
+    x:Class="AppReciclique.Pages.Educacao.Nivel5Page"
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
@@ -18,7 +18,7 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="NÍVEL 6 — REUTILIZAÇÃO CRIATIVA"
+            <Label Text="NÍVEL 5 — AÇÃO NA PRÁTICA (MUTIRÃO)"
            TextColor="white"
            FontSize="20"/>
         </VerticalStackLayout>
@@ -26,19 +26,6 @@
 
 
         <!-- 📚 CONTEÚDO -->
-
-
-        <VerticalStackLayout Padding="30" Spacing="15">
-
-
-            <Label Text="Nome: João da Silva"/>
-
-            <Label Text="Email: usuario@email.com"/>
-            <Label Text="Datadenascimento:17/01/1989"/>
-            <Label Text="Telefone:(14) 98841-5896"/>
-
-        </VerticalStackLayout>
-
 
 
         <!-- 🏠 MENU HOME -->

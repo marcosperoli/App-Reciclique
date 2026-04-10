@@ -4,8 +4,8 @@
     x:Class="AppReciclique.Pages.Educacao.Nivel1Page"
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
-    
-    <Grid RowDefinitions="Auto,*">
+
+    <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- 🔝 TOPO -->
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
@@ -18,8 +18,8 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="NÍVEL 1 — O BÁSICO"
-                   TextColor="#1B5E20"
+            <Label Text="NÍVEL 1 — O BÁSICO DA RECICLAGEM"
+                   TextColor="white"
                    FontSize="20"/>
         </VerticalStackLayout>
 
@@ -33,6 +33,7 @@
                         <Image Source="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b"
                                Aspect="AspectFill"
                                Opacity="0.45"/>
+
                         <Button Text="1- Reciclagem de Vidro"
                                 BackgroundColor="Transparent"
                                 TextColor="#1B5E20"
@@ -78,7 +79,7 @@
                         <Image Source="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6"
                                Aspect="AspectFill"
                                Opacity="0.45"/>
-                        <Button Text="Reciclagem Metal"
+                        <Button Text="4- Reciclagem Metal"
                                 BackgroundColor="Transparent"
                                 TextColor="#1B5E20"
                                 FontAttributes="Bold"
@@ -88,8 +89,39 @@
                 </Frame>
 
             </VerticalStackLayout>
+            
+            
+           
         </ScrollView>
+        <!-- 🏠 MENU HOME -->
+        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+
+            <!-- LINHA VERDE -->
+            <BoxView HeightRequest="2"
+             BackgroundColor="#2E7D32"
+             VerticalOptions="Start"/>
+
+            <!-- BOTÃO HOME -->
+            <VerticalStackLayout HorizontalOptions="Start"
+                         Margin="10,10,0,0">
+
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                </VerticalStackLayout.GestureRecognizers>
+
+                <Label Text="🏠"
+               FontSize="24"
+               HorizontalOptions="Center"/>
+
+                <Label Text="Home"
+               FontSize="10"
+               HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+
+        </Grid>
 
     </Grid>
-   
+    
+       
 </ContentPage>

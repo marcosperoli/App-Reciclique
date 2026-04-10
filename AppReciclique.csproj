@@ -72,7 +72,7 @@
 		<Compile Update="Pages\AjudaPage.xaml.cs">
 		  <DependentUpon>AjudaPage.xaml</DependentUpon>
 		</Compile>
-		<Compile Update="Pages\Educação\Nivel1page.xaml.cs">
+		<Compile Update="Pages\Educacao\Nivel1page.xaml.cs">
 		  <DependentUpon>Nivel1Page.xaml</DependentUpon>
 		</Compile>
 	</ItemGroup>
@@ -87,28 +87,28 @@
 		<MauiXaml Update="Pages\ContaUsuarioPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\BonusPage.xaml">
+		<MauiXaml Update="Pages\Educacao\BonusPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\EducacaoPage.xaml">
+		<MauiXaml Update="Pages\Educacao\EducacaoPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\Nivel1Page.xaml">
+		<MauiXaml Update="Pages\Educacao\Nivel1Page.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\Nivel2Page.xaml">
+		<MauiXaml Update="Pages\Educacao\Nivel2Page.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\Nivel3Page.xaml">
+		<MauiXaml Update="Pages\Educacao\Nivel3Page.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\Nivel4Page.xaml">
+		<MauiXaml Update="Pages\Educacao\Nivel4Page.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\Nivel5Page.xaml">
+		<MauiXaml Update="Pages\Educacao\Nivel5Page.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Educação\Nivel6Page.xaml">
+		<MauiXaml Update="Pages\Educacao\Nivel6Page.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Pages\HistoricoPage.xaml">

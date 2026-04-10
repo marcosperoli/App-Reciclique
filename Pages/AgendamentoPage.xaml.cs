@@ -68,6 +68,9 @@ public partial class AgendamentoPage : ContentPage
         string resumo = $"{data:dd/MM} às {hora}";
         AppState.UltimoAgendamento = resumo;
 
+        // ➕ SOMA PONTOS
+        AppState.Pontos += 3;
+
         // ✅ MOSTRA SUA NOTIFICAÇÃO BONITA
         lblSucesso.IsVisible = true;
 
@@ -132,4 +135,6 @@ public partial class AgendamentoPage : ContentPage
         public string? bairro { get; set; }
         public string? localidade { get; set; }
     }
+    
+
 }

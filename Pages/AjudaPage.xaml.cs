@@ -22,4 +22,8 @@ public partial class AjudaPage : ContentPage
         txtTelefone.Text = "";
         txtMensagem.Text = "";
     }
+    private async void OnHomeClicked(object sender, EventArgs e)
+    {
+        await Navigation.PopToRootAsync();
+    }
 }
