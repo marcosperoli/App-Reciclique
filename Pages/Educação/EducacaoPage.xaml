@@ -1,0 +1,128 @@
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppReciclique.EducacaoPage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F5F5">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- 🔝 TOPO -->
+        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
+
+            <Label Text="←"
+                   TextColor="White"
+                   FontSize="20">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Educação Ambiental"
+                   TextColor="White"
+                   FontSize="20"
+                   HorizontalOptions="StartAndExpand"/>
+
+        </VerticalStackLayout>
+
+        <!-- 📚 CONTEÚDO (NÍVEIS) -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="15" Padding="10">
+
+                <!-- NÍVEL 1 -->
+                <Frame CornerRadius="12" BackgroundColor="White">
+                    <VerticalStackLayout>
+                        <Image Source="nivel1.jpg" HeightRequest="120"/>
+                        <Label Text="NÍVEL 1 — O BÁSICO DA RECICLAGEM" FontAttributes="Bold"/>
+                        <Button Text="Acessar" Clicked="Nivel1_Clicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- NÍVEL 2 -->
+                <Frame CornerRadius="12" BackgroundColor="White">
+                    <VerticalStackLayout>
+                        <Image Source="nivel2.jpg" HeightRequest="120"/>
+                        <Label Text="NÍVEL 2 — LIXO ORGÂNICO E ALIMENTO" FontAttributes="Bold"/>
+                        <Button Text="Acessar" Clicked="Nivel2_Clicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- NÍVEL 3 -->
+                <Frame CornerRadius="12" BackgroundColor="White">
+                    <VerticalStackLayout>
+                        <Image Source="nivel3.jpg" HeightRequest="120"/>
+                        <Label Text="NÍVEL 3 — RESÍDUOS PERIGOSOS" FontAttributes="Bold"/>
+                        <Button Text="Acessar" Clicked="Nivel3_Clicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- NÍVEL 4 -->
+                <Frame CornerRadius="12" BackgroundColor="White">
+                    <VerticalStackLayout>
+                        <Image Source="nivel4.jpg" HeightRequest="120"/>
+                        <Label Text="NÍVEL 4 — ENTULHOS E MATERIAIS GRANDES" FontAttributes="Bold"/>
+                        <Button Text="Acessar" Clicked="Nivel4_Clicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- NÍVEL 5 -->
+                <Frame CornerRadius="12" BackgroundColor="White">
+                    <VerticalStackLayout>
+                        <Image Source="nivel5.jpg" HeightRequest="120"/>
+                        <Label Text="NÍVEL 5 — AÇÃO NA PRÁTICA (MUTIRÃO)" FontAttributes="Bold"/>
+                        <Button Text="Acessar" Clicked="Nivel5_Clicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- NÍVEL 6 -->
+                <Frame CornerRadius="12" BackgroundColor="White">
+                    <VerticalStackLayout>
+                        <Image Source="nivel6.jpg" HeightRequest="120"/>
+                        <Label Text="NÍVEL 6 — REUTILIZAÇÃO CRIATIVA" FontAttributes="Bold"/>
+                        <Button Text="Acessar" Clicked="Nivel6_Clicked"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- BÔNUS -->
+                <Frame CornerRadius="12" BackgroundColor="#E8F5E9">
+                    <VerticalStackLayout>
+                        <Image Source="bonus.jpg" HeightRequest="120"/>
+                        <Label Text="BÔNUS — CASA SUSTENTÁVEL" FontAttributes="Bold" TextColor="#1B5E20"/>
+                        <Button Text="Acessar" Clicked="Bonus_Clicked"
+                                BackgroundColor="#2E7D32"
+                                TextColor="White"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- 🔽 MENU INFERIOR -->
+        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+
+            <BoxView HeightRequest="2"
+                     BackgroundColor="#2E7D32"
+                     VerticalOptions="Start"/>
+
+            <VerticalStackLayout HorizontalOptions="Start"
+                                 Margin="10,10,0,0">
+
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnHomeClicked"/>
+                </VerticalStackLayout.GestureRecognizers>
+
+                <Label Text="🏠"
+                       FontSize="24"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Home"
+                       FontSize="10"
+                       HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

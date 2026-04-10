@@ -3,186 +3,199 @@
              x:Class="AppReciclique.MainPage"
              BackgroundColor="#F5F5F5">
 
-    <Grid RowDefinitions="Auto,*,Auto">
+    <Grid RowDefinitions="Auto,Auto,*,Auto"
+      RowSpacing="15">
 
-        <!-- 🔝 TOPO -->
-        <VerticalStackLayout Padding="15" BackgroundColor="White" Grid.Row="0" Spacing="5">
+        <!-- TOPO -->
+        <Label Grid.Row="0"
+           Text="Olá, Pamela"
+           FontSize="18"
+           FontAttributes="Bold"
+           TextColor="#1B5E20"
+           Margin="10,15,0,0"/>
 
-            <!-- LOGO GRANDE -->
-            <Image Source="logo.png"
-                   HeightRequest="120"
-                   HorizontalOptions="Center"/>
+        <!-- DASH -->
+        <Frame Grid.Row="1"
+           Margin="10,0,10,0"
+           Padding="10"
+           CornerRadius="12"
+           BackgroundColor="White"
+           HasShadow="False">
 
-            <!-- TEXTO -->
-            <Label Text="Olá, Pamela"
-                   FontSize="16"
-                   HorizontalOptions="Center"/>
+            <Grid ColumnSpacing="40"
+              ColumnDefinitions="*,*,*,*">
 
-        </VerticalStackLayout>
-
-        <!-- 📲 CONTEÚDO -->
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="15" Spacing="20">
-
-                <!-- 🔘 MENU PRINCIPAL -->
-                <Grid ColumnSpacing="10">
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <!-- AGENDAR -->
-                    <Frame Grid.Column="0" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10"
-                           BorderColor="#2E7D32"
-                            HasShadow="False">
-
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnAgendarClicked"/>
-                        </Frame.GestureRecognizers>
-                        
-                        <VerticalStackLayout HorizontalOptions="Center">
-                            <Label Text="📅" FontSize="28" HorizontalOptions="Center"/>
-                            <Label Text="Agendar" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
-                        </VerticalStackLayout>
-                    </Frame>
-
-                    <!-- PONTOS -->
-                    <Frame Grid.Column="1" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10"
-                           BorderColor="#2E7D32"
-                           HasShadow="False">
-
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnPontosClicked"/>
-                        </Frame.GestureRecognizers>
-                        
-                        <VerticalStackLayout HorizontalOptions="Center">
-                            <Label Text="🏆" FontSize="28" HorizontalOptions="Center"/>
-                            <Label Text="Pontos" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
-                        </VerticalStackLayout>
-                    </Frame>
-
-                    <!-- HISTÓRICO -->
-                    <Frame Grid.Column="2" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10"
-                           BorderColor="#2E7D32"
-                           HasShadow="False">
-
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnHistoricoClicked"/>
-                        </Frame.GestureRecognizers>
-                        
-                        <VerticalStackLayout HorizontalOptions="Center">
-                            <Label Text="📋" FontSize="28" HorizontalOptions="Center"/>
-                            <Label Text="Histórico" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
-                        </VerticalStackLayout>
-                    </Frame>
-
-                    <!-- EDUCAÇÃO -->
-                    <Frame Grid.Column="3" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10"
-                           BorderColor="#2E7D32"
-                           HasShadow="False">
-
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnEducacaoClicked"/>
-                        </Frame.GestureRecognizers>
-                        
-                        <VerticalStackLayout HorizontalOptions="Center">
-                            <Label Text="♻️" FontSize="28" HorizontalOptions="Center"/>
-                            <Label Text="Educação" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
-                        </VerticalStackLayout>
-                    </Frame>
-
-                </Grid>
-
-                <!-- 📦 ÚLTIMO AGENDAMENTO -->
-                <Frame BackgroundColor="White" CornerRadius="10"
-                       BorderColor="#2E7D32"
-                       HasShadow="False">
-                    <Label Text="Último agendamento"/>
-                </Frame>
-
-                <!-- 📢 PROPAGANDA -->
-                <Frame BackgroundColor="#E0E0E0"
-                       HeightRequest="120"
-                       CornerRadius="10">
-                    <Label Text="Espaço para propaganda"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                </Frame>
-
-            </VerticalStackLayout>
-        </ScrollView>
-
-        <!-- 🔽 MENU INFERIOR -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
-
-            <!-- LINHA VERDE EM CIMA -->
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-            <BoxView BackgroundColor="#2E7D32" Grid.Row="0"/>
-
-            <Grid Grid.Row="1" ColumnSpacing="10">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <!-- HOME -->
+                <!-- LOGO -->
                 <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
-
-                    <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnHomeClicked"/>
-                    </VerticalStackLayout.GestureRecognizers>
-                    
-                    <Label Text="🏠" FontSize="24" HorizontalOptions="Center"/>
-                    <Label Text="Home" FontSize="10" HorizontalOptions="Center"/>
+                    <Image Source="logo.png" HeightRequest="60" WidthRequest="60"/>
                 </VerticalStackLayout>
 
-                <!-- MAPA -->
+                <!-- PONTOS -->
                 <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
-
-                    <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnMapaClicked"/>
-                    </VerticalStackLayout.GestureRecognizers>
+                    <Label Text="🎖️" FontSize="20"/>
+                    <Label Text="120" FontSize="16" FontAttributes="Bold" TextColor="#1B5E20"/>
                     
-                    <Label Text="📍" FontSize="24" HorizontalOptions="Center"/>
-                    <Label Text="Mapa" FontSize="10" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
 
-                <!-- AVISOS -->
+                <!-- NÍVEL -->
                 <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
-
-                    <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnNotificacoesClicked"/>
-                    </VerticalStackLayout.GestureRecognizers>
-                    
-                    <Label Text="🔔" FontSize="24" HorizontalOptions="Center"/>
-                    <Label Text="Avisos" FontSize="10" HorizontalOptions="Center"/>
+                    <Label Text="⚪" x:Name="lblIconeNivel" FontSize="20" HorizontalOptions="Center"/>
+                    <Label Text="Iniciante" x:Name="lblNivel" FontSize="14" FontAttributes="Bold" TextColor="#1B5E20" HorizontalOptions="Center"/>
+                   
                 </VerticalStackLayout>
 
-                <!-- CONTA -->
+                <!-- COLETAS -->
                 <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
+                    <Label Text="🗑️" FontSize="20"/>
+                    <Label Text="3" FontSize="16"  FontAttributes="Bold" TextColor="#1B5E20" HorizontalOptions="Center"/>
+                                    
+       
 
-                    <VerticalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnContaClicked"/>
-                    </VerticalStackLayout.GestureRecognizers>
-                    
-                    <Label Text="👤" FontSize="24" HorizontalOptions="Center"/>
-                    <Label Text="Conta" FontSize="10" HorizontalOptions="Center"/>
                 </VerticalStackLayout>
 
             </Grid>
+        </Frame>
+
+    <!-- CONTEUDO GRID ROW 2-->
+    <ScrollView Grid.Row="2">
+      <VerticalStackLayout Padding="15" Spacing="20">
+
+        <!-- MENU PRINCIPAL -->
+        <Grid ColumnSpacing="10">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+
+          <!-- AGENDAR -->
+          <Frame Grid.Column="0" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10" BorderColor="#2E7D32" HasShadow="False">
+            <Frame.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnAgendarClicked"/>
+            </Frame.GestureRecognizers>
+            <VerticalStackLayout HorizontalOptions="Center">
+              <Label Text="📅" FontSize="28" HorizontalOptions="Center"/>
+              <Label Text="AGENDAR" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+          </Frame>
+
+          <!-- PONTOS -->
+          <Frame Grid.Column="1" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10" BorderColor="#2E7D32" HasShadow="False">
+            <Frame.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnPontosClicked"/>
+            </Frame.GestureRecognizers>
+            <VerticalStackLayout HorizontalOptions="Center">
+              <Label Text="🏆" FontSize="28" HorizontalOptions="Center"/>
+              <Label Text="PONTUAÇÃO" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+          </Frame>
+
+           <!-- EDUCACAO -->
+          <Frame Grid.Column="2" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10" BorderColor="#2E7D32" HasShadow="False">
+            <Frame.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnEducacaoClicked"/>
+            </Frame.GestureRecognizers>
+            <VerticalStackLayout HorizontalOptions="Center">
+              <Label Text="♻️" FontSize="28" HorizontalOptions="Center"/>
+              <Label Text="TRILHA" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+          </Frame>
+
+           <!-- HISTORICO -->
+          <Frame Grid.Column="3" BackgroundColor="#E8F5E9" CornerRadius="12" Padding="10" BorderColor="#2E7D32" HasShadow="False">
+            <Frame.GestureRecognizers>
+              <TapGestureRecognizer Tapped="OnHistoricoClicked"/>
+            </Frame.GestureRecognizers>
+            <VerticalStackLayout HorizontalOptions="Center">
+              <Label Text="📋" FontSize="28" HorizontalOptions="Center"/>
+              <Label Text="HISTÓRICO" FontSize="11" FontAttributes="Bold" TextColor="#2E7D32" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+          </Frame>
 
         </Grid>
 
+        <!-- LOJAS PARCEIRAS-->
+        <Frame Margin="5" Padding="10" CornerRadius="12" BackgroundColor="White" HasShadow="True">
+          <VerticalStackLayout>
+            <Label Text="Lojas Parceiras:" FontSize="16" FontAttributes="Bold" TextColor="#2E7D32" Margin="5"/>
+          </VerticalStackLayout>
+        </Frame>
+
+        <!-- CARROSSEL -->
+        <CollectionView x:Name="carouselParceiros" ItemsSource="{Binding parceiros}" ItemsLayout="HorizontalList" HeightRequest="150">
+          <CollectionView.ItemTemplate>
+            <DataTemplate>
+              <Frame WidthRequest="90" HeightRequest="90" Margin="5" CornerRadius="10" Padding="5" BackgroundColor="#F9F9F9" HasShadow="False">
+                <Image Source="{Binding}" Aspect="AspectFit"/>
+              </Frame>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+
+      </VerticalStackLayout>
+    </ScrollView>
+
+    <!-- MENU INFERIOR (ROW 3) -->
+    <Grid Grid.Row="3" BackgroundColor="White" Padding="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="2"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <BoxView BackgroundColor="#2E7D32" Grid.Row="0"/>
+
+      <Grid Grid.Row="1" ColumnSpacing="10">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- HOME -->
+        <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+          <VerticalStackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnHomeClicked"/>
+          </VerticalStackLayout.GestureRecognizers>
+          <Label Text="🏠" FontSize="24" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <!-- MAPA -->
+        <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+          <VerticalStackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnMapaClicked"/>
+          </VerticalStackLayout.GestureRecognizers>
+          <Label Text="📍" FontSize="24" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <!-- AVISOS -->
+        <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
+          <VerticalStackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnNotificacoesClicked"/>
+          </VerticalStackLayout.GestureRecognizers>
+          <Label Text="🔔" FontSize="24" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <!-- CONTA -->
+        <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
+          <VerticalStackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnContaClicked"/>
+          </VerticalStackLayout.GestureRecognizers>
+          <Label Text="👤" FontSize="24" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+        <!-- AJUDA -->
+        <VerticalStackLayout Grid.Column="4" HorizontalOptions="Center">
+          <VerticalStackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnAjudaClicked"/>
+          </VerticalStackLayout.GestureRecognizers>
+          <Label Text="❓" FontSize="24" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+
+      </Grid>
     </Grid>
 
+  </Grid>
 </ContentPage>

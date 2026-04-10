@@ -1,11 +1,11 @@
 namespace AppReciclique;
 
-public partial class HistoricoPage : ContentPage
+public partial class NotificacoesPage : ContentPage
 {
-	public HistoricoPage()
-	{
-		InitializeComponent();
-	}
+    public NotificacoesPage()
+    {
+        InitializeComponent();
+    }
 
     private async void OnVoltarClicked(object sender, EventArgs e)
     {

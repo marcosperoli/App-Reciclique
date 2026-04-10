@@ -1,0 +1,31 @@
+<ContentPage  
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppReciclique.LoginPage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F5F5">
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+
+        <Label Text="Login"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#2E7D32"/>
+
+        <Entry x:Name="txtEmail"
+               Placeholder="E-mail"
+               Keyboard="Email"/>
+
+        <Entry x:Name="txtSenha"
+               Placeholder="Senha"
+               IsPassword="True"/>
+
+        <Button Text="Entrar"
+                BackgroundColor="#2E7D32"
+                TextColor="White"
+                Clicked="OnLoginClicked"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

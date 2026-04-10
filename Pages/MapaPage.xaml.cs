@@ -1,10 +1,8 @@
-using System;
-
 namespace AppReciclique;
 
-public partial class AgendamentoPage : ContentPage
+public partial class MapaPage : ContentPage
 {
-    public AgendamentoPage()
+    public MapaPage()
     {
         InitializeComponent();
     }

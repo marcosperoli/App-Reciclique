@@ -1,7 +1,8 @@
-<ContentPage  
+<ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="AppReciclique.AgendamentoPage"
+    xmlns:models="clr-namespace:AppReciclique.Models"
+    x:Class="AppReciclique.HistoricoPage"
     NavigationPage.HasNavigationBar="False"
     BackgroundColor="#F5F5F5">
 
@@ -18,26 +19,55 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Label Text="Agendamento Coleta"
+            <Label Text="Histórico de Atividades"
                    TextColor="White"
-                   FontSize="20"/>
+                   FontSize="20"
+                   HorizontalOptions="StartAndExpand"/>
+
         </VerticalStackLayout>
 
         <!-- 📲 CONTEÚDO -->
-        <VerticalStackLayout Grid.Row="1" Padding="25">
-            <Label Text="Calendário"
-                   FontSize="18"/>
-        </VerticalStackLayout>
+        <CollectionView Grid.Row="1"
+                        x:Name="listaHistorico"
+                        Margin="10">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Agendamento">
+                    <Frame Margin="5"
+                           Padding="10"
+                           BorderColor="#2E7D32"
+                           CornerRadius="10">
+
+                        <VerticalStackLayout Spacing="5">
+
+                            <Label Text="{Binding Tipo}"
+                                   FontAttributes="Bold"
+                                   TextColor="#2E7D32"/>
+
+                            <Label Text="{Binding Endereco}"
+                                   FontSize="13"/>
+
+                            <Label Text="{Binding Data, StringFormat='Data: {0:dd/MM/yyyy}'}"
+                                   FontSize="12"/>
+
+                            <Label Text="{Binding Hora}"
+                                   FontSize="12"/>
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
 
         <!-- 🔽 MENU INFERIOR -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
-            <!-- LINHA VERDE -->
             <BoxView HeightRequest="2"
                      BackgroundColor="#2E7D32"
                      VerticalOptions="Start"/>
 
-            <!-- HOME -->
             <VerticalStackLayout HorizontalOptions="Start"
                                  Margin="10,10,0,0">
 

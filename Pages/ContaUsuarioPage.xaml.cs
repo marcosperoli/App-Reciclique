@@ -1,11 +1,11 @@
 namespace AppReciclique;
 
-public partial class PontuacaoPage : ContentPage
+public partial class ContaUsuarioPage : ContentPage
 {
-	public PontuacaoPage()
-	{
-		InitializeComponent();
-	}
+    public ContaUsuarioPage()
+    {
+        InitializeComponent();
+    }
 
     private async void OnVoltarClicked(object sender, EventArgs e)
     {

@@ -1,14 +1,66 @@
-﻿using System;
-
-namespace AppReciclique;
+﻿namespace AppReciclique;
 
 public partial class MainPage : ContentPage
 {
+
+    List<string> parceiros = new List<string>
+    {
+        "banner1.jpg",
+        "banner2.jpg",
+        "banner3.jpg",
+        "banner4.jpg",
+        "banner5.jpg",
+        "banner6.jpg",
+        "banner7.jpg",
+        "banner8.jpg",
+        "banner9.jpg",
+        "banner10.jpg",
+    };
+
     public MainPage()
     {
         InitializeComponent();
+
+        carouselParceiros.ItemsSource = parceiros;
+
+        int pontos = 120; // depois você pode puxar isso do sistema
+        AtualizarNivel(pontos);
     }
 
+    void AtualizarNivel(int pontos)
+    {
+        string nivel;
+        string icone;
+
+        if (pontos <= 100)
+        {
+            nivel = "Bronze";
+            icone = "🟤";
+        }
+        else if (pontos <= 300)
+        {
+            nivel = "Prata";
+            icone = "⚪";
+        }
+        else if (pontos <= 700)
+        {
+            nivel = "Ouro";
+            icone = "🟡";
+        }
+        else if (pontos <= 1500)
+        {
+            nivel = "Platina";
+            icone = "🔷";
+        }
+        else
+        {
+            nivel = "Diamante";
+            icone = "💎";
+        }
+
+        lblNivel.Text = nivel;
+        lblIconeNivel.Text = icone;
+    }
 
     private async void OnAgendarClicked(object sender, EventArgs e)
     {
@@ -29,7 +81,7 @@ public partial class MainPage : ContentPage
 
     private async void OnEducacaoClicked(object sender, EventArgs e)
     {
-        
+
         await Navigation.PushAsync(new EducacaoPage());
     }
 
@@ -56,12 +108,17 @@ public partial class MainPage : ContentPage
         await Navigation.PushAsync(new ContaUsuarioPage());
     }
 
+
+    private async void OnAjudaClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AjudaPage());
+    }
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
 
     }
-}
 
+}
 
 
 

@@ -1,0 +1,47 @@
+<ContentPage  
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppReciclique.AjudaPage"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F5F5">
+
+    <VerticalStackLayout>
+
+        <!-- 🔝 TOPO -->
+        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10">
+
+            <Label Text="←"
+                   TextColor="White"
+                   FontSize="20">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Ajuda e Suporte"
+                   TextColor="White"
+                   FontSize="20"/>
+
+        </VerticalStackLayout>
+
+        <!-- 📲 CONTEÚDO -->
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Entry Placeholder="Seu nome" x:Name="txtNome"/>
+
+            <Entry Placeholder="Telefone" x:Name="txtTelefone"/>
+
+            <Editor Placeholder="Digite sua dúvida ou sugestão..."
+                    HeightRequest="120"
+                    x:Name="txtMensagem"/>
+
+            <Button Text="Enviar"
+                    BackgroundColor="#2E7D32"
+                    TextColor="White"
+                    Clicked="OnEnviarClicked"/>
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

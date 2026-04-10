@@ -1,0 +1,95 @@
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppReciclique.Pages.Educacao.Nivel1Page"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F5F5">
+    
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- 🔝 TOPO -->
+        <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
+
+            <Label Text="←"
+                   TextColor="White"
+                   FontSize="20">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnVoltarClicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="NÍVEL 1 — O BÁSICO"
+                   TextColor="#1B5E20"
+                   FontSize="20"/>
+        </VerticalStackLayout>
+
+        <!-- 📚 CONTEÚDO -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="18">
+
+                <!-- BOTÃO 1 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b"
+                               Aspect="AspectFill"
+                               Opacity="0.45"/>
+                        <Button Text="1- Reciclagem de Vidro"
+                                BackgroundColor="Transparent"
+                                TextColor="#1B5E20"
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                Clicked="OnVidroClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 2 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ZBqR-oGxH3gv7l9akL0rEUMS-Cj1JGWNgw"
+                               Aspect="AspectFill"
+                               Opacity="0.45"/>
+                        <Button Text="2- Reciclagem de Plástico"
+                                BackgroundColor="Transparent"
+                                TextColor="#1B5E20"
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                Clicked="OnPlasticoClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 3 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrkimgrelW5JqZIS3zFznhtGQ08Y2NUllNaA"
+                               Aspect="AspectFill"
+                               Opacity="0.45"/>
+                        <Button Text="3- Reciclagem de Papel"
+                                BackgroundColor="Transparent"
+                                TextColor="#1B5E20"
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                Clicked="OnPapelClicked"/>
+                    </Grid>
+                </Frame>
+
+                <!-- BOTÃO 4 -->
+                <Frame CornerRadius="18" HeightRequest="140">
+                    <Grid>
+                        <Image Source="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6"
+                               Aspect="AspectFill"
+                               Opacity="0.45"/>
+                        <Button Text="Reciclagem Metal"
+                                BackgroundColor="Transparent"
+                                TextColor="#1B5E20"
+                                FontAttributes="Bold"
+                                FontSize="20"
+                                Clicked="OnMetalClicked"/>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+   
+</ContentPage>
