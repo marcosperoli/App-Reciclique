@@ -4,10 +4,10 @@ public partial class LoginPage : ContentPage
 {
     Dictionary<string, string> usuarios = new Dictionary<string, string>()
 {
-    { "pamela@email.com", "123" },
-    { "marcos@email.com", "123" },
-    { "maeli@email.com", "123" },
-    { "gabriel@email.com", "123" }
+    { "pamela@etec.com", "123" },
+    { "marcos@etec.com", "123" },
+    { "maeli@etec.com", "123" },
+    { "gabriel@etec.com", "123" }
 
     };
 
