@@ -20,7 +20,8 @@
 
             <Label Text="NÍVEL 1 — O BÁSICO DA RECICLAGEM"
                    TextColor="white"
-                   FontSize="20"/>
+                   FontSize="20"
+                   FontAttributes="Bold"/>
         </VerticalStackLayout>
 
         <!-- 📚 CONTEÚDO -->

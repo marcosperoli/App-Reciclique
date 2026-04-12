@@ -19,8 +19,10 @@
             </Label>
 
             <Label Text="BONUS — CASA SUSTENTÁVEL"
-           TextColor="white"
-           FontSize="20"/>
+                TextColor="white"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            
         </VerticalStackLayout>
 
 

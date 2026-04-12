@@ -20,7 +20,8 @@
 
             <Label Text="Agendamento Coleta"
                    TextColor="White"
-                   FontSize="20"/>
+                   FontSize="20"
+                   FontAttributes="Bold"/>
         </VerticalStackLayout>
 
         <!-- CONTEÚDO -->

@@ -22,9 +22,6 @@ public partial class MainPage : ContentPage
         InitializeComponent();
 
         carouselParceiros.ItemsSource = parceiros;
-
-        int pontos = 120; // depois você pode puxar isso do sistema
-        AtualizarNivel(pontos);
     }
 
     void AtualizarNivel(int pontos)
@@ -122,7 +119,11 @@ public partial class MainPage : ContentPage
     {
         base.OnAppearing();
 
-        lblPontos.Text = AppState.Pontos.ToString();
+        int pontos = AppState.Pontos;
+
+        lblPontos.Text = pontos.ToString(); // 👈 mantém
+
+        AtualizarNivel(pontos); // 👈 chama o método
     }
 }
 

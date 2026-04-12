@@ -5,7 +5,7 @@ public partial class App : Application
     public App()
     {
         InitializeComponent();
-        var navPage = new NavigationPage(new MainPage());
+        var navPage = new NavigationPage(new LoginPage());
         MainPage = navPage;
 
         // Preferir acessar a Page pela coleção de Windows (single-window: Windows[0].Page)

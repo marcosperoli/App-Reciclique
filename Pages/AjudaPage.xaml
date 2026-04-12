@@ -20,7 +20,8 @@
 
             <Label Text="Ajuda e Suporte"
                    TextColor="White"
-                   FontSize="20"/>
+                   FontSize="20"
+                   FontAttributes="Bold"/>
 
         </VerticalStackLayout>
 

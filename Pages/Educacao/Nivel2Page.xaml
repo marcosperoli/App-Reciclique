@@ -11,8 +11,9 @@
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
 
             <Label Text="←"
-           TextColor="White"
-           FontSize="20">
+                TextColor="White"
+                FontSize="20"
+                FontAttributes="Bold">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnVoltarClicked"/>
                 </Label.GestureRecognizers>

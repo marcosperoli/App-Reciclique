@@ -25,10 +25,10 @@
 
 
 
-        <!-- 📚 CONTEÚDO -->
+        <!-- CONTEÚDO -->
 
 
-        <!-- 🏠 MENU HOME -->
+        <!--  MENU HOME -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
             <!-- LINHA VERDE -->

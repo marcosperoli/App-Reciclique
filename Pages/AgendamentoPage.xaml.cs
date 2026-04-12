@@ -6,13 +6,13 @@ namespace AppReciclique;
 
 public partial class AgendamentoPage : ContentPage
 {
-    SQLiteHelper db; // ✅ DECLARAÇÃO DO BANCO
+    SQLiteHelper db; //  DECLARAÇÃO DO BANCO
 
     public AgendamentoPage()
     {
         InitializeComponent();
 
-        // ✅ CONSTRUTOR 
+        //  CONSTRUTOR 
         string dbPath = Path.Combine(FileSystem.AppDataDirectory, "app.db3");
         db = new SQLiteHelper(dbPath);
     }
@@ -38,19 +38,19 @@ public partial class AgendamentoPage : ContentPage
         TimeSpan hora = horaColeta.Time;
         string obs = txtObs.Text;
 
-        // 🔴 VALIDAÇÃO PRIMEIRO (CORRETO)
+        // VALIDAÇÃO PRIMEIRO (CORRETO)
         if (string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(endereco))
         {
             await DisplayAlert("Erro", "Preencha os campos obrigatórios", "OK");
             return;
         }
 
-        // ✅ MONTA ENDEREÇO COMPLETO
+        //  MONTA ENDEREÇO COMPLETO
         string enderecoCompleto = string.IsNullOrWhiteSpace(numero) && string.IsNullOrWhiteSpace(complemento)
             ? endereco
             : $"{endereco}, {numero} {complemento}";
 
-        // ✅ CRIA OBJETO
+        //  CRIA OBJETO
         var novo = new Agendamento
         {
             Tipo = tipo,
@@ -61,17 +61,25 @@ public partial class AgendamentoPage : ContentPage
             Observacao = obs
         };
 
-        // ✅ SALVA NO BANCO
+        // SALVA NO BANCO
         await db.SalvarAgendamento(novo);
 
-        // ✅ SALVA RESUMO
+        //  SALVA RESUMO
         string resumo = $"{data:dd/MM} às {hora}";
         AppState.UltimoAgendamento = resumo;
 
-        // ➕ SOMA PONTOS
-        AppState.Pontos += 3;
+        //  SOMA PONTOS
+      
+        if (tipo?.Contains("Super") == true)
+        {
+            AppState.Pontos += 5;
+        }
+        else
+        {
+            AppState.Pontos += 3;
+        }
 
-        // ✅ MOSTRA SUA NOTIFICAÇÃO BONITA
+        //  MOSTRA SUA NOTIFICAÇÃO BONITA
         lblSucesso.IsVisible = true;
 
         await lblSucesso.FadeTo(1, 300);

@@ -22,7 +22,8 @@
             <Label Text="Histórico de Atividades"
                    TextColor="White"
                    FontSize="20"
-                   HorizontalOptions="StartAndExpand"/>
+                   FontAttributes="Bold"/>
+           
 
         </VerticalStackLayout>
 

@@ -18,10 +18,11 @@
                 </Label.GestureRecognizers>
               </Label>
 
-              <Label Text="Meus Pontos"
+              <Label Text="MEUS PONTOS"
                      TextColor="White"
                      FontSize="20"
-                      HorizontalOptions="StartAndExpand"/>
+                     FontAttributes="Bold"
+                     HorizontalOptions="StartAndExpand"/>
 
              </VerticalStackLayout>
 

@@ -3,21 +3,43 @@
              x:Class="AppReciclique.LoginPage"
              Title="Login">
 
-    <VerticalStackLayout Padding="30" Spacing="15">
+    <VerticalStackLayout Padding="28" Spacing="15">
 
-        <Label
-            Text="Reciclique"
-            FontSize="30"
-            HorizontalOptions="Center"/>
+        <Image
+            Source="logo.png"
+            HorizontalOptions="Center"
+            HeightRequest="120"
+            Aspect="AspectFit" />
 
-        <Entry
+       <Frame CornerRadius="10"
+               BackgroundColor="White"
+               Padding="5"
+              Margin="5">
+
+         <Entry
             x:Name="txtEmail"
-            Placeholder="Digite seu e-mail"/>
+            Placeholder="Digite seu e-mail"
+            Keyboard="Email"
+            Margin="5"
+            TextColor="Black"
+            PlaceholderColor="Gray"/>
+           
+      </Frame>
 
-        <Entry
+      <Frame CornerRadius="5"
+              BackgroundColor="White"
+              Padding="5"
+              Margin="5">
+
+            <Entry
             x:Name="txtSenha"
             Placeholder="Digite sua senha"
-            IsPassword="True"/>
+            IsPassword="True"
+            Margin="5"
+            TextColor="Black"
+            PlaceholderColor="Gray"/>
+
+       </Frame>
 
         <Button
             Text="Entrar"
