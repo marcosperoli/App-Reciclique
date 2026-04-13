@@ -11,6 +11,7 @@ public partial class LoginPage : ContentPage
 
     };
 
+
     public LoginPage()
     {
         InitializeComponent();
@@ -23,20 +24,22 @@ public partial class LoginPage : ContentPage
 
         if (usuarios.ContainsKey(email) && usuarios[email] == senha)
         {
+            // 👇 pega nome antes do @
+            string nome = email.Split('@')[0];
+
+            // 👇 deixa primeira letra maiúscula
+            nome = char.ToUpper(nome[0]) + nome.Substring(1);
+
+            // 👇 salva no AppState
+            AppState.NomeUsuario = nome;
+
             await DisplayAlert("Sucesso", "Login realizado!", "OK");
 
-
-            // 🔥 FORÇA A TROCA DE TELA
             Application.Current.MainPage = new NavigationPage(new MainPage());
         }
         else
         {
             await DisplayAlert("Erro", "Email ou senha inválidos", "OK");
         }
-    
-       
-       
-
-
     }
 }

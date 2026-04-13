@@ -29,22 +29,22 @@ public partial class MainPage : ContentPage
         string nivel;
         string icone;
 
-        if (pontos <= 100)
+        if (pontos <= 70)
         {
             nivel = "Bronze";
             icone = "🟤";
         }
-        else if (pontos <= 300)
+        else if (pontos <= 150)
         {
             nivel = "Prata";
             icone = "⚪";
         }
-        else if (pontos <= 700)
+        else if (pontos <= 400)
         {
             nivel = "Ouro";
             icone = "🟡";
         }
-        else if (pontos <= 1500)
+        else if (pontos <= 1000)
         {
             nivel = "Platina";
             icone = "🔷";
@@ -124,7 +124,11 @@ public partial class MainPage : ContentPage
         lblPontos.Text = pontos.ToString(); // 👈 mantém
 
         AtualizarNivel(pontos); // 👈 chama o método
+
+        lblSaudacao.Text = $"Olá, {AppState.NomeUsuario}";
     }
+
+  
 }
 
 

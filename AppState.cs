@@ -11,5 +11,7 @@ namespace AppReciclique
             get => Preferences.Get("pontos", 0);
             set => Preferences.Set("pontos", value);
         }
+
+        public static string NomeUsuario { get; set; } = "";
     }
 }

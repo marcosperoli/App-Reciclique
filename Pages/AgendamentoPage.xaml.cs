@@ -72,11 +72,11 @@ public partial class AgendamentoPage : ContentPage
       
         if (tipo?.Contains("Super") == true)
         {
-            AppState.Pontos += 5;
+            AppState.Pontos += 50;
         }
         else
         {
-            AppState.Pontos += 3;
+            AppState.Pontos += 30;
         }
 
         //  MOSTRA SUA NOTIFICAÇÃO BONITA

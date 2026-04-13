@@ -63,31 +63,45 @@
         </ScrollView>
 
 
-        <!--MENU HOME (ROW 2) -->
-        <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
+        <Grid Grid.Row="2" BackgroundColor="White" Padding="10"
+      ColumnDefinitions="*,Auto">
 
             <!-- LINHA VERDE -->
-            <BoxView HeightRequest="2"
-                     BackgroundColor="#2E7D32"
-                     VerticalOptions="Start"/>
+            <BoxView Grid.ColumnSpan="2"
+             HeightRequest="2"
+             BackgroundColor="#2E7D32"
+             VerticalOptions="Start"/>
 
-            <!-- BOTÃO HOME -->
-            <VerticalStackLayout HorizontalOptions="Start"
-                                 Margin="10,10,0,0">
+            <!-- HOME -->
+            <VerticalStackLayout Grid.Column="0"
+                         HorizontalOptions="Start"
+                         Margin="10,10,0,0">
 
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label Text="🏠"
-                       FontSize="24"
-                       HorizontalOptions="Center"/>
+               FontSize="24"
+               HorizontalOptions="Center"/>
 
                 <Label Text="Home"
-                       FontSize="10"
-                       HorizontalOptions="Center"/>
+               FontSize="10"
+               HorizontalOptions="Center"/>
 
             </VerticalStackLayout>
+
+            <!-- BOTÃO SAIR -->
+            <Button Grid.Column="1"
+            Text="Sair"
+            Clicked="OnLogoutClicked"
+            BackgroundColor="#D32F2F"
+            TextColor="White"
+            HeightRequest="40"
+            WidthRequest="60"
+            CornerRadius="6"
+            VerticalOptions="Center"
+            Margin="0,10,10,0"/>
 
         </Grid>
 
