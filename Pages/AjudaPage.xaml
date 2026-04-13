@@ -7,7 +7,7 @@
 
     <VerticalStackLayout>
 
-        <!-- 🔝 TOPO -->
+        <!-- TOPO (ROW 0) -->
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10">
 
             <Label Text="←"
@@ -25,7 +25,7 @@
 
         </VerticalStackLayout>
 
-        <!-- 📲 CONTEÚDO -->
+        <!-- CONTEÚDO (ROW 1) -->
         <VerticalStackLayout Padding="20" Spacing="15">
 
             <Entry Placeholder="Seu nome" x:Name="txtNome"/>

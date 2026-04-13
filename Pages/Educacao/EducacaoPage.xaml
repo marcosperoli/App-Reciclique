@@ -7,7 +7,7 @@
 
     <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- 🔝 TOPO -->
+        <!--  TOPO (ROW 0) -->
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
 
             <Label Text="←"
@@ -26,7 +26,7 @@
 
         </VerticalStackLayout>
 
-        <!-- 📚 CONTEÚDO (NÍVEIS) -->
+        <!-- 📚 CONTEÚDO (ROW 1) -->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout Spacing="15" Padding="10">
 
@@ -127,7 +127,7 @@
             </VerticalStackLayout>
         </ScrollView>
 
-        <!-- 🔽 MENU INFERIOR -->
+        <!-- MENU INFERIOR (ROW 2) -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
             <BoxView HeightRequest="2"

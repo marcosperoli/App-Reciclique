@@ -8,7 +8,7 @@
 
     <Grid RowDefinitions="Auto,*,Auto">
 
-        <!-- 🔝 TOPO -->
+        <!-- TOPO (ROW 0) -->
         <VerticalStackLayout BackgroundColor="#2E7D32" Padding="10" Grid.Row="0">
 
             <Label Text="←"
@@ -27,7 +27,7 @@
 
         </VerticalStackLayout>
 
-        <!-- 📲 CONTEÚDO -->
+        <!-- CONTEÚDO (ROW 1) -->
         <CollectionView Grid.Row="1"
                         x:Name="listaHistorico"
                         Margin="10">
@@ -62,7 +62,7 @@
 
         </CollectionView>
 
-        <!-- 🔽 MENU INFERIOR -->
+        <!-- MENU INFERIOR (ROW 2) -->
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10">
 
             <BoxView HeightRequest="2"
