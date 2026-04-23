@@ -26,8 +26,12 @@
                    TextColor="White"
                    FontSize="20"
                    FontAttributes="Bold"/>
-        </VerticalStackLayout>
 
+            <Label x:Name="lblBoasVindas"
+                   TextColor="White"
+                   FontSize="14"/>
+
+        </VerticalStackLayout>
 
         <!-- CONTEÚDO (ROW 1) -->
         <ScrollView Grid.Row="1">
@@ -39,19 +43,70 @@
 
                     <VerticalStackLayout Spacing="10">
 
-                        <Label Text="Nome: João da Silva"
+                        <!-- ALTERADO: agora mostra o ID do usuário -->
+                        <Label x:Name="lblId"
                                FontSize="16"
                                TextColor="#1B5E20"/>
 
-                        <Label Text="Email: usuario@email.com"
+                        <!-- ALTERADO: agora mostra o nome do usuário logado -->
+                        <Label x:Name="lblNome"
                                FontSize="16"
                                TextColor="#1B5E20"/>
 
-                        <Label Text="Data de nascimento: 17/01/1989"
+                        <!-- ALTERADO: agora mostra o e-mail do usuário logado -->
+                        <Label x:Name="lblEmail"
                                FontSize="16"
                                TextColor="#1B5E20"/>
 
-                        <Label Text="Telefone: (14) 98841-5896"
+                        <!-- ALTERADO: agora mostra a data de nascimento do usuário logado -->
+                        <Label x:Name="lblNascimento"
+                               FontSize="16"
+                               TextColor="#1B5E20"/>
+
+                        <!-- ALTERADO: agora mostra o telefone do usuário logado -->
+                        <Label x:Name="lblTelefone"
+                               FontSize="16"
+                               TextColor="#1B5E20"/>
+
+                        <!-- ALTERADO PARA O PEDIDO: endereço completo -->
+                        <Label x:Name="lblEndereco"
+                               FontSize="16"
+                               TextColor="#1B5E20"/>
+
+                        <!-- ALTERADO PARA O PEDIDO: CEP -->
+                        <Label x:Name="lblCep"
+                               FontSize="16"
+                               TextColor="#1B5E20"/>
+                        
+                        <!-- NOVO: Pontos do usuário -->
+                        <Label x:Name="lblPontos"
+                               FontSize="16"
+                               TextColor="#1B5E20"/>
+
+                        <!-- NOVO: Nível do usuário -->
+                        <Label x:Name="lblNivel"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#2E7D32"/>
+                        
+                        <!-- NOVO: badge do nível -->
+                        <Label x:Name="lblBadge"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                        
+                        <!-- NOVO: Barra de progresso -->
+                        <ProgressBar x:Name="progressNivel"
+                                     HeightRequest="10"
+                                     ProgressColor="#2E7D32"/>
+
+                        <!-- ALTERADO PARA O PEDIDO: plano gratuito -->
+                        <Label x:Name="lblPlano"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#2E7D32"/>
+                        
+                        <Label x:Name="lblUltimoAgendamento"
                                FontSize="16"
                                TextColor="#1B5E20"/>
 
@@ -59,49 +114,61 @@
 
                 </Frame>
 
+                <Button Text="Ver notificações"
+                        Clicked="OnNotificacoesClicked"
+                        BackgroundColor="#2E7D32"
+                        TextColor="White"
+                        CornerRadius="10"/>
+
+                <!-- ALTERADO PARA O PEDIDO: texto institucional -->
+                <Label x:Name="lblApoio"
+                       Text="Aplicativo apoiado pela Prefeitura de Marília - SP"
+                       FontSize="12"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Gray"/>
+
             </VerticalStackLayout>
         </ScrollView>
 
-
         <Grid Grid.Row="2" BackgroundColor="White" Padding="10"
-      ColumnDefinitions="*,Auto">
+              ColumnDefinitions="*,Auto">
 
             <!-- LINHA VERDE -->
             <BoxView Grid.ColumnSpan="2"
-             HeightRequest="2"
-             BackgroundColor="#2E7D32"
-             VerticalOptions="Start"/>
+                     HeightRequest="2"
+                     BackgroundColor="#2E7D32"
+                     VerticalOptions="Start"/>
 
             <!-- HOME -->
             <VerticalStackLayout Grid.Column="0"
-                         HorizontalOptions="Start"
-                         Margin="10,10,0,0">
+                                 HorizontalOptions="Start"
+                                 Margin="10,10,0,0">
 
                 <VerticalStackLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnHomeClicked"/>
                 </VerticalStackLayout.GestureRecognizers>
 
                 <Label Text="🏠"
-               FontSize="24"
-               HorizontalOptions="Center"/>
+                       FontSize="24"
+                       HorizontalOptions="Center"/>
 
                 <Label Text="Home"
-               FontSize="10"
-               HorizontalOptions="Center"/>
+                       FontSize="10"
+                       HorizontalOptions="Center"/>
 
             </VerticalStackLayout>
 
             <!-- BOTÃO SAIR -->
             <Button Grid.Column="1"
-            Text="Sair"
-            Clicked="OnLogoutClicked"
-            BackgroundColor="#D32F2F"
-            TextColor="White"
-            HeightRequest="40"
-            WidthRequest="60"
-            CornerRadius="6"
-            VerticalOptions="Center"
-            Margin="0,10,10,0"/>
+                    Text="Sair"
+                    Clicked="OnLogoutClicked"
+                    BackgroundColor="#D32F2F"
+                    TextColor="White"
+                    HeightRequest="40"
+                    WidthRequest="60"
+                    CornerRadius="6"
+                    VerticalOptions="Center"
+                    Margin="0,10,10,0"/>
 
         </Grid>
 

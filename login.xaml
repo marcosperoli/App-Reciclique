@@ -11,35 +11,35 @@
             HeightRequest="120"
             Aspect="AspectFit" />
 
-       <Frame CornerRadius="10"
+        <Frame CornerRadius="10"
                BackgroundColor="White"
                Padding="5"
-              Margin="5">
-
-         <Entry
-            x:Name="txtEmail"
-            Placeholder="Digite seu e-mail"
-            Keyboard="Email"
-            Margin="5"
-            TextColor="Black"
-            PlaceholderColor="Gray"/>
-           
-      </Frame>
-
-      <Frame CornerRadius="5"
-              BackgroundColor="White"
-              Padding="5"
-              Margin="5">
+               Margin="5">
 
             <Entry
-            x:Name="txtSenha"
-            Placeholder="Digite sua senha"
-            IsPassword="True"
-            Margin="5"
-            TextColor="Black"
-            PlaceholderColor="Gray"/>
+                x:Name="txtEmail"
+                Placeholder="Digite seu e-mail"
+                Keyboard="Email"
+                Margin="5"
+                TextColor="Black"
+                PlaceholderColor="Gray"/>
 
-       </Frame>
+        </Frame>
+
+        <Frame CornerRadius="5"
+               BackgroundColor="White"
+               Padding="5"
+               Margin="5">
+
+            <Entry
+                x:Name="txtSenha"
+                Placeholder="Digite sua senha"
+                IsPassword="True"
+                Margin="5"
+                TextColor="Black"
+                PlaceholderColor="Gray"/>
+
+        </Frame>
 
         <Button
             Text="Entrar"
